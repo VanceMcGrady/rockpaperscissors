@@ -1,3 +1,7 @@
+const playerAnswer = document.querySelector(".player-answer").innerHTML;
+const computerAnswer = document.querySelector(".computer-answer").innerHTML;
+console.log(playerAnswer);
+
 function computerPlay() {
   let move = "";
   let randNum = Math.floor(Math.random() * 3);
@@ -16,5 +20,3 @@ function computerPlay() {
       null;
   }
 }
-
-console.log(computerPlay());

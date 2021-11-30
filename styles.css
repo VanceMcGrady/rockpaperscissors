@@ -1,3 +1,28 @@
 body {
   background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  padding: 90px;
+  gap: 20px;
+}
+
+.computersquare {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 70px;
+}
+
+.playersquare {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 70px;
 }
