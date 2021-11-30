@@ -1,9 +1,25 @@
 body {
   background-color: aliceblue;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 90px;
   gap: 20px;
+}
+
+button {
+  border: 3px solid black;
+  border-radius: 4px;
+}
+.game-container {
+  display: flex;
+  justify-content: center;
+  background-color: cadetblue;
+  gap: 20px;
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 20px;
 }
 
 .computersquare {
@@ -12,7 +28,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: 3px solid black;
+  border-radius: 4px;
   padding: 70px;
 }
 
@@ -23,6 +40,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: 3px solid black;
   padding: 70px;
 }
