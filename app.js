@@ -1,6 +1,8 @@
 const playerAnswer = document.querySelector(".player-answer").innerHTML;
 const computerAnswer = document.querySelector(".computer-answer").innerHTML;
-console.log(playerAnswer);
+const rockBtn = document.querySelector(".rock");
+const paperBtn = document.querySelector(".paper");
+const scissorsBtn = document.querySelector(".scissors");
 
 function computerPlay() {
   let move = "";
