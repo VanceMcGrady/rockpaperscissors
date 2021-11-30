@@ -7,7 +7,8 @@ const scissorsBtn = document.querySelector(".scissors");
 let playerScore = document.querySelector(".player-score");
 let computerScore = document.querySelector(".computer-score");
 
-console.log(playerScore);
+let compScore = 0;
+let playScore = 0;
 
 const playBtn = document.querySelector(".play-btn");
 
@@ -47,21 +48,52 @@ function gameLogic() {
   if (!playerMove) {
     outcome.innerHTML = "You Must Enter A Move To Play";
     computerAnswer.innerHTML = "";
+    compScore += 0;
+    playScore += 0;
   } else if (playerMove == "scissors" && compMove == "rock") {
-    outcome.innerHTML = "You Lose!";
+    compScore += 1;
+    playScore += 0;
+    outcome.innerHTML = "Rock Beats Scissors!";
   } else if (playerMove == "scissors" && compMove == "paper") {
-    outcome.innerHTML = "You Win!";
+    playScore += 1;
+    compScore += 0;
+    outcome.innerHTML = "Scissors Beats Paper!";
   } else if (playerMove == "paper" && compMove == "scissors") {
-    outcome.innerHTML = "You Lose!";
+    compScore += 1;
+    playScore += 0;
+    outcome.innerHTML = "Scissors Beats Paper!";
   } else if (playerMove == "paper" && compMove == "rock") {
-    outcome.innerHTML = "You Win!";
+    playScore += 1;
+    compScore += 0;
+    outcome.innerHTML = "Paper Beats Rock!";
   } else if (playerMove == "rock" && compMove == "paper") {
-    outcome.innerHTML = "You Lose!";
+    compScore += 1;
+    playScore += 0;
+    outcome.innerHTML = "Paper Beats Rock!";
   } else if (playerMove == "rock" && compMove == "scissors") {
-    outcome.innerHTML = "You Win!";
+    playScore += 1;
+    compScore += 0;
+    outcome.innerHTML = "Rock Beats Scissors!";
   } else {
+    compScore += 0;
+    playScore += 0;
     outcome.innerHTML = "Tie";
   }
+
+  if (playScore == 5) {
+    outcome.innerHTML = "You Win";
+    playScore = 0;
+    compScore = 0;
+  } else if (compScore == 5) {
+    outcome.innerHTML = "You Lose!";
+    compScore = 0;
+    playScore = 0;
+  } else {
+    null;
+  }
+
+  playerScore.innerHTML = playScore;
+  computerScore.innerHTML = compScore;
 }
 
 playBtn.addEventListener("click", gameLogic);
