@@ -43,3 +43,16 @@ button {
   border: 3px solid black;
   padding: 70px;
 }
+
+.score-card {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.player-score-card,
+.computer-score-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

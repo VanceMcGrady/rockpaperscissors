@@ -4,6 +4,10 @@ let outcome = document.querySelector(".outcome");
 const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
+let playerScore = document.querySelector(".player-score");
+let computerScore = document.querySelector(".computer-score");
+
+console.log(playerScore);
 
 const playBtn = document.querySelector(".play-btn");
 
