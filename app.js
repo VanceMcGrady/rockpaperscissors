@@ -76,6 +76,7 @@ function gameLogic() {
     outcome.innerHTML = "Rock Beats Scissors!";
   } else {
     compScore += 0;
+    g;
     playScore += 0;
     outcome.innerHTML = "Tie";
   }
@@ -94,6 +95,10 @@ function gameLogic() {
 
   playerScore.innerHTML = playScore;
   computerScore.innerHTML = compScore;
+  setTimeout(function () {
+    playerAnswer.innerHTML = "";
+    computerAnswer.innerHTML = "";
+  }, 1200);
 }
 
 playBtn.addEventListener("click", gameLogic);
