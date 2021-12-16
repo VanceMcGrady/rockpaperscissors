@@ -98,6 +98,7 @@ function gameLogic() {
   setTimeout(function () {
     playerAnswer.innerHTML = "";
     computerAnswer.innerHTML = "";
+    outcome.innerHTML = "";
   }, 1200);
 }
 
